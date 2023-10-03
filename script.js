@@ -288,6 +288,275 @@ sear.addEventListener('click', ()=>{
     }
 })
 
+const all= document.getElementById('all');
+const veg= document.getElementById('veg');
+const non= document.getElementById('non');
+
+
+all.addEventListener('click', ()=>{
+    location.reload();
+})
+
+
+veg.addEventListener('click', ()=>{
+    const ans=[];
+    for (let index = 0; index < arr.length; index++) {
+        const element = arr[index];
+        if(element.type=='veg'){
+            ans.push(element);
+        }
+    }
+    flexbox.innerHTML=''
+    for (let index = 0; index < ans.length; index++) {
+
+        var heart= document.createElement('img');
+        heart.src='images/icons8-heart-50.png';
+        heart.height=20;
+        heart.width=20;
+        heart.setAttribute('class', 'rat')
+        
+        var star= document.createElement('img');
+        star.src='images/icons8-star-50.png';
+        star.height=20;
+        star.width=20;
+        
+        
+        var pink= document.createElement('img');
+        pink.src='images/icons8-heart-30.png';
+        pink.height=20;
+        pink.width=20;
+        pink.setAttribute('id', 'pink')
+    
+    var div= document.createElement('div')
+    var im= document.createElement('img');
+    var p= document.createElement('p');
+    var h5= document.createElement('h5');
+    var time= document.createElement('p');
+    time.setAttribute('id', 'type')
+    
+
+    im.src=ans[index].imageSrc;
+    im.height=200;
+    im.width=289;
+    div.appendChild(im);
+    p.innerText=ans[index].type;
+    h5.innerText=ans[index].name;
+    time.innerText=ans[index].time;
+    div.appendChild(p);
+    div.appendChild(h5);
+    div.appendChild(time);
+    
+    var secdiv= document.createElement('div')
+    secdiv.setAttribute('class', 'sec')
+    var rat= document.createElement('p')
+    rat.innerText=ans[index].rating;
+    secdiv.appendChild(star);
+    secdiv.appendChild(rat)
+    secdiv.appendChild(heart)
+    
+    div.appendChild(secdiv)
+    flexbox.appendChild(div)
+    
+    }
+    
+})
+
+non.addEventListener('click', ()=>{
+    const ans=[];
+    for (let index = 0; index < arr.length; index++) {
+        const element = arr[index];
+        if(element.type=='non-veg'){
+            ans.push(element);
+        }
+    }
+    flexbox.innerHTML=''
+    for (let index = 0; index < ans.length; index++) {
+
+        var heart= document.createElement('img');
+        heart.src='images/icons8-heart-50.png';
+        heart.height=20;
+        heart.width=20;
+        heart.setAttribute('class', 'rat')
+        
+        var star= document.createElement('img');
+        star.src='images/icons8-star-50.png';
+        star.height=20;
+        star.width=20;
+        
+        
+        var pink= document.createElement('img');
+        pink.src='images/icons8-heart-30.png';
+        pink.height=20;
+        pink.width=20;
+        pink.setAttribute('id', 'pink')
+    
+    var div= document.createElement('div')
+    var im= document.createElement('img');
+    var p= document.createElement('p');
+    var h5= document.createElement('h5');
+    var time= document.createElement('p');
+    time.setAttribute('id', 'type')
+    
+
+    im.src=ans[index].imageSrc;
+    im.height=200;
+    im.width=289;
+    div.appendChild(im);
+    p.innerText=ans[index].type;
+    h5.innerText=ans[index].name;
+    time.innerText=ans[index].time;
+    div.appendChild(p);
+    div.appendChild(h5);
+    div.appendChild(time);
+    
+    var secdiv= document.createElement('div')
+    secdiv.setAttribute('class', 'sec')
+    var rat= document.createElement('p')
+    rat.innerText=ans[index].rating;
+    secdiv.appendChild(star);
+    secdiv.appendChild(rat)
+    secdiv.appendChild(heart)
+    
+    div.appendChild(secdiv)
+    flexbox.appendChild(div)
+    
+    }
+})
+
+const above=document.getElementById('vehicle1');
+const below=document.getElementById('vehicle2')
+
+above.addEventListener('change', ()=>{
+    if(above.checked){
+        below.checked=false;
+       const ans=[];
+       for (let index = 0; index < arr.length; index++) {
+        const element = arr[index];
+        if(element.rating>=4){
+            ans.push(element);
+        }
+       }
+        flexbox.innerHTML='';
+       for (let index = 0; index < ans.length; index++) {
+
+        var heart= document.createElement('img');
+        heart.src='images/icons8-heart-50.png';
+        heart.height=20;
+        heart.width=20;
+        heart.setAttribute('class', 'rat')
+        
+        var star= document.createElement('img');
+        star.src='images/icons8-star-50.png';
+        star.height=20;
+        star.width=20;
+        
+        
+        var pink= document.createElement('img');
+        pink.src='images/icons8-heart-30.png';
+        pink.height=20;
+        pink.width=20;
+        pink.setAttribute('id', 'pink')
+    
+    var div= document.createElement('div')
+    var im= document.createElement('img');
+    var p= document.createElement('p');
+    var h5= document.createElement('h5');
+    var time= document.createElement('p');
+    time.setAttribute('id', 'type')
+    
+
+    im.src=ans[index].imageSrc;
+    im.height=200;
+    im.width=289;
+    div.appendChild(im);
+    p.innerText=ans[index].type;
+    h5.innerText=ans[index].name;
+    time.innerText=ans[index].time;
+    div.appendChild(p);
+    div.appendChild(h5);
+    div.appendChild(time);
+    
+    var secdiv= document.createElement('div')
+    secdiv.setAttribute('class', 'sec')
+    var rat= document.createElement('p')
+    rat.innerText=ans[index].rating;
+    secdiv.appendChild(star);
+    secdiv.appendChild(rat)
+    secdiv.appendChild(heart)
+    
+    div.appendChild(secdiv)
+    flexbox.appendChild(div)
+    
+    }
+    }
+})
+
+
+below.addEventListener('change', ()=>{
+    if(below.checked){
+        above.checked=false
+       const ans=[];
+       for (let index = 0; index < arr.length; index++) {
+        const element = arr[index];
+        if(element.rating < 4){
+            ans.push(element);
+        }
+       }
+        flexbox.innerHTML='';
+       for (let index = 0; index < ans.length; index++) {
+
+        var heart= document.createElement('img');
+        heart.src='images/icons8-heart-50.png';
+        heart.height=20;
+        heart.width=20;
+        heart.setAttribute('class', 'rat')
+        
+        var star= document.createElement('img');
+        star.src='images/icons8-star-50.png';
+        star.height=20;
+        star.width=20;
+        
+        
+        var pink= document.createElement('img');
+        pink.src='images/icons8-heart-30.png';
+        pink.height=20;
+        pink.width=20;
+        pink.setAttribute('id', 'pink')
+    
+    var div= document.createElement('div')
+    var im= document.createElement('img');
+    var p= document.createElement('p');
+    var h5= document.createElement('h5');
+    var time= document.createElement('p');
+    time.setAttribute('id', 'type')
+    
+
+    im.src=ans[index].imageSrc;
+    im.height=200;
+    im.width=289;
+    div.appendChild(im);
+    p.innerText=ans[index].type;
+    h5.innerText=ans[index].name;
+    time.innerText=ans[index].time;
+    div.appendChild(p);
+    div.appendChild(h5);
+    div.appendChild(time);
+    
+    var secdiv= document.createElement('div')
+    secdiv.setAttribute('class', 'sec')
+    var rat= document.createElement('p')
+    rat.innerText=ans[index].rating;
+    secdiv.appendChild(star);
+    secdiv.appendChild(rat)
+    secdiv.appendChild(heart)
+    
+    div.appendChild(secdiv)
+    flexbox.appendChild(div)
+    
+    }
+    }
+})
+
 
 
 
