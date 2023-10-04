@@ -30,9 +30,19 @@ div.main{
 .nav ul li{
     cursor: pointer;
 }
+#cross{
+    display: none;
+}
 .nav{
     display: flex;
     width: 22rem;
+    justify-content: space-between;
+}
+.hello{
+    display: flex;
+    width: 200px;
+    background-color: white;
+    height: 200px;
     justify-content: space-between;
 }
 .nav img{
@@ -184,3 +194,83 @@ div.main{
     margin-bottom: 30px;
     justify-content: space-between;
 }
+
+
+
+@media screen and (max-width: 320px) {
+    .nav ul{
+        display: none;
+    }
+    .nav img{
+        display: none;
+    }
+    #cross{
+        display: block;
+    }
+    .two img{
+        width: 1100px;
+        height: 350px;
+    }
+    .four button{
+        width: 320px;
+    }
+    .five{
+        grid-column: 1/12;
+    }
+    .six{
+        grid-column: 1/12;
+        width: 1240px;
+    }
+    .seven div:not(:nth-of-type(1)) {
+        display: none;
+    }
+    .seven :nth-child(2){
+        width: 600px;
+        font-size: 17px;
+    }
+    .seven :nth-child(1){
+        margin-left: 200px;
+    }
+    .eight{
+        display: none;
+    }
+  }
+
+  @media screen and (max-width: 376px) {
+    .nav ul{
+        display: none;
+    }
+    .nav img{
+        display: none;
+    }
+    #cross{
+        display: block;
+    }
+    .two img{
+        width: 1100px;
+        height: 350px;
+    }
+    .four button{
+        width: 320px;
+    }
+    .five{
+        grid-column: 1/12;
+    }
+    .six{
+        grid-column: 1/12;
+        width: 1240px;
+    }
+    .seven div:not(:nth-of-type(1)) {
+        display: none;
+    }
+    .seven :nth-child(2){
+        width: 600px;
+        font-size: 17px;
+    }
+    .seven :nth-child(1){
+        margin-left: 200px;
+    }
+    .eight{
+        display: none;
+    }
+  }

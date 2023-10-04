@@ -558,6 +558,20 @@ below.addEventListener('change', ()=>{
 })
 
 
+const cross= document.getElementById('cross');
+const ul= document.getElementById('ul');
+
+cross.addEventListener('click', ()=>{   
+        var x = document.getElementById("nav");
+        if (x.className === "nav") {
+          x.className = " hello";
+        } else {
+          x.className = "nav";
+        }
+      
+})
+
+
 
 
 
